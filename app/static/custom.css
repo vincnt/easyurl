@@ -1,0 +1,12 @@
+body {
+    padding-top:50px;
+    }
+    @media (max-width: 300px;){
+        body {
+            padding-top:0;
+        }
+    }
+.col-centered{
+    float:none;
+    margin: 0 auto;
+}

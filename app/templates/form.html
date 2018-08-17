@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="" method="post" name="short">
+<p> Input URL: {{ form.inputURL() }} </p>
+<p><br>{{url_name}}/ {{ form.shortener() }} </p>
+ <p>   <input type="submit" value ="shorten"> </p>
+</form>
+{% endblock %}
