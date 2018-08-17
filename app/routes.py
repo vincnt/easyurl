@@ -15,7 +15,7 @@ def main():
         target_url, short_url = dbmodel.return_url(myshortenedurl)
         complete_short_url = url_name + '/' + str(short_url)
         print(complete_short_url)
-        return render_template('index.html',target_url=str(target_url), finalanswer = complete_short_url, url_name=url_name)
+        return render_template('shortened.html',target_url=str(target_url), finalanswer = complete_short_url, url_name=url_name)
     else:
         form = forms.LoginForm()
         return render_template('form.html', form=form, url_name = url_name)
