@@ -1,6 +1,5 @@
 from app import app, forms
-from flask import Flask,render_template, request, redirect
-from flask_sqlalchemy import SQLAlchemy
+from flask import render_template, request, redirect
 from app import db as dbmodel
 
 
@@ -16,7 +15,7 @@ def main():
         target_url, short_url = dbmodel.return_url(myshortenedurl)
         complete_short_url = url_name + '/' + str(short_url)
         print(complete_short_url)
-        return render_template('1index.html',target_url=str(target_url), finalanswer = complete_short_url, url_name=url_name)
+        return render_template('index.html',target_url=str(target_url), finalanswer = complete_short_url, url_name=url_name)
     else:
         form = forms.LoginForm()
         return render_template('form.html', form=form, url_name = url_name)
